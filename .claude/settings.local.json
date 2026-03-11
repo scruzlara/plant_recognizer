@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(which pandoc:*)",
+      "Bash(which wkhtmltopdf; which weasyprint; pandoc --list-output-formats | grep -E \"pdf|html\")",
+      "Bash(pandoc --list-input-formats | head -5; latex --version 2>/dev/null | head -1; pdflatex --version 2>/dev/null | head -1)",
+      "Bash(cd /Users/cruzlara5/Documents/plant_recognizer/docs && pandoc classifier_documentation.md \\\\\n  -o classifier_documentation.pdf \\\\\n  --pdf-engine=pdflatex \\\\\n  -V geometry:margin=2.5cm \\\\\n  -V fontsize=11pt \\\\\n  -V documentclass=article \\\\\n  -V mainfont=\"DejaVu Serif\" \\\\\n  -V monofont=\"DejaVu Sans Mono\" \\\\\n  -V colorlinks=true \\\\\n  -V linkcolor=blue \\\\\n  --highlight-style=tango \\\\\n  2>&1)",
+      "Bash(which xelatex:*)",
+      "Bash(cd /Users/cruzlara5/Documents/plant_recognizer/docs && pandoc classifier_documentation.md \\\\\n  -o classifier_documentation.pdf \\\\\n  --pdf-engine=xelatex \\\\\n  -V geometry:margin=2.5cm \\\\\n  -V fontsize=11pt \\\\\n  -V documentclass=article \\\\\n  -V colorlinks=true \\\\\n  -V linkcolor=blue \\\\\n  --syntax-highlighting=tango \\\\\n  2>&1)",
+      "Bash(fc-list | grep -i \"dejavu\" | grep -i mono | head -5)",
+      "Bash(pandoc classifier_documentation.md \\\\\n  -o classifier_documentation.pdf \\\\\n  --pdf-engine=xelatex \\\\\n  -V geometry:margin=2.5cm \\\\\n  -V fontsize=11pt \\\\\n  -V documentclass=article \\\\\n  -V colorlinks=true \\\\\n  -V linkcolor=blue \\\\\n  -V monofont=\"DejaVuSansM Nerd Font Mono\" \\\\\n  --syntax-highlighting=tango \\\\\n  2>&1 | grep -v \"Missing character\")"
+    ]
+  }
+}
